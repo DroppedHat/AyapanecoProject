@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayapaneco Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Ayapaneco Audio</div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Preserving Sound</h2>
+            <p class="subtitle">Listen to the audio clip. Type what you hear.</p>
+            <form id="transcribeForm">
+                <label>Select Audio Sample:</label>
+                <select id="audioSelect" onchange="changeAudio()">
+                    <option value="He_left.mp3">Audio A</option>
+                    <option value="Monkey_arrived_in_that_place.m4a">Audio B</option>
+                    <option value="He_said_to_him_what_are_you_doing.m4a">Audio C</option>
+                    <option value="The_lighting_says_I_dont_shout_often.m4a">Audio D</option>
+                    <option value="But_what_the_heck.m4a">Audio E</option>
+                    <option value="Not_one_little_bit.m4a">Audio F</option>
+                </select>
+
+                <div class="audio-player-box">
+                    <audio controls id="mainPlayer">
+                        <source src="He_left.m4a" type="audio/mp4">
+                    </audio>
+                </div>
+
+                <label>Type what you hear:</label>
+                <input type="text" id="transcriptionText" placeholder="Enter transcription here..." required>
+
+                <button type="submit" class="btn-submit">Submit Response</button>
+            </form>
+            <div id="statusMessage"></div>
+        </div>
+    </div>
+<br>
+</br>
+<br>
+</br>
+        <ul>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
